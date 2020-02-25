@@ -23,7 +23,7 @@ def main():
 
     # A. Student is between the  age 18 and 24 (boundary value included)
     if (userInput < 18 or userInput > 24):
-        print("Not eligible")
+        print(0)
         return
 
     # Get number of years lived in CA input
@@ -40,7 +40,7 @@ def main():
         userInput = get_boolean_input("Have your parents paid California state tax for at least 1 year in their lifetime? (Y/N): ")
 
         if (userInput.lower() != 'y'):
-            print("Not eligible")
+            print(0)
             return
 
     # Boolean input: Have you worked part time for at least 6 months in a relevent field of study?
@@ -63,7 +63,7 @@ def main():
                 return
 
     # If all passes, you are eligible
-    print("You are eligible!")
+    print(1)
 
 # Check for the system version.
 # Python 3 is required for the input
