@@ -1,0 +1,41 @@
+Environment: Python3, command line
+
+Test Case #1 (AB) 
+Input: 15
+Output: 0
+
+Test Case #2 (ACDE)
+Input: 20
+Input: 1
+Input: N
+Output: 0 
+
+Test Case #3 (ACFI)
+Input: 20
+Input: 3
+Input: Y
+Output: 1
+
+Test Case #4 (ACDGHJ)
+Input: 20 
+Input: 1
+Input: Y
+Input: N
+Input: Y
+Output: 0
+
+Test Case #5 (ACFHKL)
+Input: 20
+Input: 3
+Input: N
+Input: N
+Input: N
+Output: 0 
+
+Test Case #6 (ACFHKM) 
+Input: 20
+Input: 3
+Input: N
+Input: N
+Input: Y
+Output: Dean for Consideration 
