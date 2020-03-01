@@ -62,6 +62,10 @@ def main():
                 print("Dean for consideration")
                 return
 
+            else:
+                print(0)
+                return
+
     # If all passes, you are eligible
     print(1)
 
