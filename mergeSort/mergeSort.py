@@ -13,7 +13,8 @@ def checkInput(userInput):
     #Checks if user input is sorted
     #If not, warn user and return false, otherwise return true
     if(len(userInput) is not 0):
-        if(checkDigits(userInput)):
+        checkDig = checkDigits(userInput)
+        if(checkDig):
             if(userInput == sorted(userInput)):
                 return True
             else:
