@@ -13,16 +13,27 @@ def checkInput(userInput):
     #Checks if user input is sorted
     #If not, warn user and return false, otherwise return true
     if(len(userInput) is not 0):
-        if("".join(userInput).isdigit()):
+        if(checkDigits(userInput)):
             if(userInput == sorted(userInput)):
                 return True
             else:
                 print("Please enter sorted array!")
-        else:
-            print("Please enter numbers only!")
     else:
         print("Please enter an array!")
     return False
+
+def checkDigits(userInput):
+    #Loops through each element of input array
+    #Strips leading "-" to check if element is digit
+    #If digit, convert string to int
+    #Otherwise warn user and return false
+    for num in range(len(userInput)):
+        if(userInput[num].lstrip('-').isdigit()):
+            userInput[num] = int(userInput[num])
+        else:
+            print("Please enter numbers only!")
+            return False
+    return True
 
 def main():
     checkA = False
