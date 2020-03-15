@@ -1,4 +1,6 @@
 def checkInput(age, gender):
+    #check if age and gender inputs are valid
+    #if age is not digit or gender is not b/g, warn user
     if(not age.isdigit()):
         print("Invalid Age, Try Again")
         return False
@@ -8,6 +10,9 @@ def checkInput(age, gender):
     return True
 
 def main():
+    #takes age and gender input from user
+    #compares age and gender to input boundaries to determing ticket type
+    #if not eligible, warn user
     inputCheck = False
     while(not inputCheck):
         age = input("How old is the competitor? (In years): ")
@@ -27,7 +32,7 @@ def main():
     if(age > 11 and age < 15 and gender.lower() == b):
         print("Purchase tickets for the Quiz Competition")
 
-    if(age > 10 and age < 15 and gender.lower() == b):
+    if(age > 10 and age < 15 and gender.lower() == g):
         print("Purchase tickets for the Essay Writing Competition")
 
     if(age > 20):
