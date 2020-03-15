@@ -22,21 +22,27 @@ def main():
         inputCheck = checkInput(age, gender)
     age = int(age)
 
+    # Boys and girls age<6,  can participate in Rhyming.
     if(age < 6):
         print("Purchase tickets for the Rhyming Competition")
 
+    # Boys age >7 and <10,  can participate in Storytelling.
+    # Girls age >7 and <10,  can participate in Drawing.
     if(age > 7 and age < 10):
         if(gender.lower() == "b"):
             return print("Purchase tickets for the Storytelling Competition")
         if((gender.lower() == "g")):
             return print("Purchase tickets for the Drawing Competition")
 
+    # Boys age >11 and <15,  can participate in a Quiz.
     if(age > 11 and age < 15 and gender.lower() == "b"):
         return print("Purchase tickets for the Quiz Competition")
 
+    # Girls age >10 and <15 ,  can participate in Essay Writing.
     if(age > 10 and age < 15 and gender.lower() == "g"):
         return print("Purchase tickets for the Essay Writing Competition")
 
+    # Girls and boys age >20,  can participate in Poetry.
     if(age > 20):
         return print("Purchase tickets for the Poetry Competition")
     else:
