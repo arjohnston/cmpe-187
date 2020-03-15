@@ -1,3 +1,5 @@
+import sys
+
 def checkInput(age, gender):
     #check if age and gender inputs are valid
     #if age is not digit or gender is not b/g, warn user
@@ -24,22 +26,27 @@ def main():
         print("Purchase tickets for the Rhyming Competition")
 
     if(age > 7 and age < 10):
-        if(gender.lower() == b):
-            print("Purchase tickets for the Storytelling Competition")
-        if((gender.lower() == g)):
-            print("Purchase tickets for the Drawing Competition")
+        if(gender.lower() == "b"):
+            return print("Purchase tickets for the Storytelling Competition")
+        if((gender.lower() == "g")):
+            return print("Purchase tickets for the Drawing Competition")
 
-    if(age > 11 and age < 15 and gender.lower() == b):
-        print("Purchase tickets for the Quiz Competition")
+    if(age > 11 and age < 15 and gender.lower() == "b"):
+        return print("Purchase tickets for the Quiz Competition")
 
-    if(age > 10 and age < 15 and gender.lower() == g):
-        print("Purchase tickets for the Essay Writing Competition")
+    if(age > 10 and age < 15 and gender.lower() == "g"):
+        return print("Purchase tickets for the Essay Writing Competition")
 
     if(age > 20):
-        print("Purchase tickets for the Poetry Competition")
+        return print("Purchase tickets for the Poetry Competition")
     else:
         print("The competitor is not eligible for competition")
 
-if __name__ == '__main__':
+# Check for the system version.
+# Python 3 is required for the input
+# If using python 3, then call the main function
+if (sys.version_info > (3, 0)):
     main()
-    
+# Otherwise fail gracefully
+else:
+    print("You need python3 for this")
