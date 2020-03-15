@@ -1,5 +1,5 @@
 def merge_Sort(A, B):
-    #Merges the two arrays
+    #Merges the two arrays 
     #Sorts merged arrays
     A.extend(B)
     A.sort()
@@ -13,8 +13,7 @@ def checkInput(userInput):
     #Checks if user input is sorted
     #If not, warn user and return false, otherwise return true
     if(len(userInput) is not 0):
-        checkDig = checkDigits(userInput)
-        if(checkDig):
+        if(checkDigits(userInput)):
             if(userInput == sorted(userInput)):
                 return True
             else:
@@ -47,8 +46,7 @@ def main():
     while(not checkA):
         userInput = raw_input("Enter First Array (Leave Spaces Between Numbers)\n")
         arrayA = userInput.split()
-        checkA = checkInput(arrayA);
-
+    
     while(not checkB):
         userInput = raw_input("Enter Second Array (Leave Spaces Between Numbers)\n")
         arrayB = userInput.split()
@@ -56,7 +54,9 @@ def main():
 
     sortedArray = merge_Sort(arrayA, arrayB)
     print(sortedArray)
-
+    
 
 if __name__ == '__main__':
     main()
+    
+
