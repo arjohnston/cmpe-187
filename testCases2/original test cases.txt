@@ -1,0 +1,39 @@
+Environment: Python3, command line
+
+Input : Expected Output
+Test case #1
+0.05 : Add 0.05 to the balance
+0.10 : Add 0.10 to the balance
+0.25 : Add 0.25 to the balance
+red : dispense red gumball, subtract 0.05 from balance
+yellow : dispense yellow gumball, subtract 0.10 from balance
+return : return 0.25
+
+Test case #2
+return : return 0.00
+
+Test case #3
+red : Insufficient funds
+yellow : Insufficient funds
+return : return 0.00
+
+Test case #4
+0.05 : Add 0.05 to the balance
+yellow : Insufficient funds
+0.05 : Add 0.05 to the balance
+red : dispense red gumball, subtract 0.05 from balance
+yellow : Insufficient funds
+return : return 0.05
+
+Test case #5
+1.00 : Incorrect input, try again
+-1 : Incorrect input, try again
+return : return 0.00
+
+Test case #6
+0.25 : add 0.25 to balance
+RED : dispense red gumball, subtract 0.05 from balance
+rEd : dispense red gumball, subtract 0.05 from balance
+yElLoW : dispense yellow gumball, subtract 0.10 from balance
+ye11ow : Incorrect input, try again
+return : return 0.05
